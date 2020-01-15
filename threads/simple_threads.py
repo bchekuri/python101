@@ -11,7 +11,7 @@ def squareNumber(n):
     dt_string = datetime.now().strftime("%H:%M:%S")
     millis = int(round(time.time() * 1000))
     print("Each Thread Time - %d" % millis)
-    time.sleep(2)
+    time.sleep(n)
     return n ** 2
 
 # function to be mapped over
@@ -19,7 +19,7 @@ def calculateParallel(numbers, threads=10):
     pool = ThreadPool(threads)
     results = pool.map(squareNumber, numbers)
     pool.close()
-    pool.join()
+    #pool.join()
     return results
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ app = Flask(__name__)
 api = Api(app)
 
 logging.basicConfig(level=logging.INFO,
-                    format='[%(asctime)s] [%(levelname)s] [%(module)s.%(funcName)s:%(lineno)s]: %(message)s')
+                    format='[%(asctime)s] [%(levelname)s] %(module)s.%(funcName)s:%(lineno)s: %(message)s')
 
 class Health(Resource):
 
