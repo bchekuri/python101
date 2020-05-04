@@ -41,7 +41,7 @@ def main():
     count = 0
     for image in images:
         image.convert('1')
-        image.save(os.path.join(read_argument.args.od, pdf_file_name + str(count) + ".tiff"), compression="group4", dpi=(300, 0))
+        image.save(os.path.join(read_argument.args.od, pdf_file_name + str(count) + ".tiff"), dpi=(300, 0))
         count = count + 1
     logging.debug("Finish")
 
